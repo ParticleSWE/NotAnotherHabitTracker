@@ -15,6 +15,7 @@
 		0D0352AD2BC91F75002AE8E8 /* NotAnotherHabitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0352AC2BC91F75002AE8E8 /* NotAnotherHabitTrackerTests.swift */; };
 		0D0352B72BC91F75002AE8E8 /* NotAnotherHabitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0352B62BC91F75002AE8E8 /* NotAnotherHabitTrackerUITests.swift */; };
 		0D0352B92BC91F75002AE8E8 /* NotAnotherHabitTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0352B82BC91F75002AE8E8 /* NotAnotherHabitTrackerUITestsLaunchTests.swift */; };
+		0D1CA3082BD1913300F350CB /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1CA3072BD1913300F350CB /* LaunchScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		0D0352B22BC91F75002AE8E8 /* NotAnotherHabitTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotAnotherHabitTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D0352B62BC91F75002AE8E8 /* NotAnotherHabitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAnotherHabitTrackerUITests.swift; sourceTree = "<group>"; };
 		0D0352B82BC91F75002AE8E8 /* NotAnotherHabitTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAnotherHabitTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0D1CA3072BD1913300F350CB /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		0D1CA3092BD1A35800F350CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +100,10 @@
 		0D0352972BC91F74002AE8E8 /* NotAnotherHabitTracker */ = {
 			isa = PBXGroup;
 			children = (
+				0D1CA3092BD1A35800F350CB /* Info.plist */,
 				0D0352982BC91F74002AE8E8 /* NotAnotherHabitTrackerApp.swift */,
 				0D03529A2BC91F74002AE8E8 /* ContentView.swift */,
+				0D1CA3072BD1913300F350CB /* LaunchScreenView.swift */,
 				0D03529C2BC91F74002AE8E8 /* Item.swift */,
 				0D03529E2BC91F75002AE8E8 /* Assets.xcassets */,
 				0D0352A02BC91F75002AE8E8 /* NotAnotherHabitTracker.entitlements */,
@@ -265,6 +270,7 @@
 				0D03529B2BC91F74002AE8E8 /* ContentView.swift in Sources */,
 				0D03529D2BC91F74002AE8E8 /* Item.swift in Sources */,
 				0D0352992BC91F74002AE8E8 /* NotAnotherHabitTrackerApp.swift in Sources */,
+				0D1CA3082BD1913300F350CB /* LaunchScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +434,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotAnotherHabitTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitHell;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -436,9 +445,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -446,10 +455,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ParticleSWE.NotAnotherHabitTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -466,6 +476,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotAnotherHabitTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HabitHell;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -474,9 +487,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -484,10 +497,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ParticleSWE.NotAnotherHabitTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
